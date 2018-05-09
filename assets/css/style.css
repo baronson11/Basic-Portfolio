@@ -1,4 +1,4 @@
-/* Basic styles */
+/* Base styles */
 
 * {
   box-sizing: border-box;
@@ -7,7 +7,13 @@
 body {
   font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
   line-height: 1.5;
-  margin: auto;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  /*  putting display: flex; in body makes all items children */
+  /*  flex direction set as column keeps page vertically aligned */
+  /*  min-height: 100vh is displaying this at 100% of the viewport */
 }
 
 h1 {
@@ -16,15 +22,20 @@ h1 {
   padding: 20px;
 }
 
-main {
+section {
+  background-color: red;
   background-image: url('../img/background.png');
   background-repeat: repeat;
+  flex: 1;
+  /* flex: 1; pushs the main body to fill the entire viewport, and pushes the footer to the bottom */
 }
 
 .footer {
   color: #fff;
   background-color: #777;
   text-align: center;
+  padding: 15px 0;
+  border-top: solid #1f8390 5px;
 }
 
 /* Flexbox header */
@@ -67,17 +78,130 @@ a:visited {
 
 /* About section  */
 
-img {
-  width: 15%;
+.about {
+  width: 60%;
+  background-color: #fff;
+  margin: auto;
+  margin-top: 30px;
+  padding-bottom: 50px;
 }
 
-.about {
-  width: 80%;
-  background-color: #fff;
-  border: solid red 1px;
+.about h2 {
+  color: #1f8390;
+  font-size: 2em;
+  font-family: 'Georgia', Times, 'Times New Roman', serif;
+  margin: 25px;
+  border-bottom: solid #777 1px;
+}
+
+.about img {
+  margin: 25px;
+  width: 10%;
+}
+
+.about p {
+  margin: 25px;
 }
 
 /*  Contact section */
 
+.contact {
+  width: 60%;
+  background-color: #fff;
+  margin: auto;
+  margin-top: 30px;
+  padding-bottom: 50px;
+}
+
+.contact h2 {
+  color: #1f8390;
+  font-size: 2em;
+  font-family: 'Georgia', Times, 'Times New Roman', serif;
+  margin: 25px;
+  border-bottom: solid #777 1px;
+}
+
+.contact fieldset {
+  margin: 25px;
+}
+
+label {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+input,
+textarea {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+textarea {
+  padding: 80px;
+}
+
+button {
+  color: #fff;
+  background-color: #1f8390;
+  padding: 10px 30px;
+}
 
 /* Portfolio section */
+
+.portfolio {
+  width: 60%;
+  background-color: #fff;
+  margin: auto;
+  margin-top: 30px;
+  padding-bottom: 50px;
+}
+
+.portfolio h2 {
+  color: #1f8390;
+  font-size: 2em;
+  font-family: 'Georgia', Times, 'Times New Roman', serif;
+  margin: 25px;
+  border-bottom: solid #777 1px;
+}
+
+.portfolio div {
+  padding: 100px;
+  border: solid #777 1px;
+  margin: 10px;
+  display: inline-block;
+  color: #fff;
+  font-size: 1.5em;
+  font-family: 'Georgia', Times, 'Times New Roman', serif;
+}
+
+.portfolio span {
+  background-color: #1f8390;
+  padding: 10px 30px;
+  display: block;
+}
+
+.item-1 {
+  background-image: url('../img/hangman.png');
+  background-size: cover;
+}
+
+.item-2 {
+  background-image: url('../img/rpggame.jpg');
+  background-size: cover;
+}
+
+.item-3 {
+  background-image: url('../img/trivia.png');
+  background-size: cover;
+}
+
+.item-4 {
+  background-image: url('../img/widget.png');
+  background-size: cover;
+}
+
+.item-5 {
+  background-image: url('../img/rockpaperscissors.jpg');
+  background-size: cover;
+}
