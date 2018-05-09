@@ -20,6 +20,8 @@ h1 {
   color: #fff;
   background-color: #1f8390;
   padding: 20px;
+  font-size: 1.8em;
+  font-weight: bold;
 }
 
 section {
@@ -66,6 +68,7 @@ section {
 .menu li {
   padding-right: 15px;
   padding-top: 20px;
+  margin-top: 15px;
 }
 
 /* Link styles */
