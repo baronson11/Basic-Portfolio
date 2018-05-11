@@ -158,21 +158,23 @@ button {
 }
 
 .portfolio div {
-  padding: 100px;
+  /* padding: 100px; */
   border: solid #777 1px;
   margin: 10px;
   display: inline-block;
   color: #fff;
   font-size: 1.5em;
   font-family: 'Georgia', Times, 'Times New Roman', serif;
-  max-width: 350px;
-  max-height: 350px;
+  width: 300px;
+  height: 300px;
+  text-align: center;
 }
 
-.portfolio span {
+.portfolio p {
   background-color: #1f8390;
   padding: 10px 30px;
   display: block;
+  margin-top: 40%;
 }
 
 .item-1 {
